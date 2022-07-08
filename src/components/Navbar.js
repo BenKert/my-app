@@ -11,7 +11,9 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
 
   return (
     <nav>
-      <Link to="/">Home</Link>
+      <Link to="/">
+        <img alt="logo" src={logo}></img>
+      </Link>
       <div>
         {loggedIn ? (
           <>
