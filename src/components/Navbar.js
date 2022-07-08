@@ -16,22 +16,14 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
       <div>
         {loggedIn ? (
           <>
-            <Link to="/">
-              <button>Home</button>
-            </Link>
-            <Link to="/add">
-              <button>Add</button>
-            </Link>
+            <Link to="/">Home</Link>
+            <Link to="/add">Add</Link>
             <button onClick={handleLogout}>Logout</button>
           </>
         ) : (
           <>
-            <Link to="/login">
-              <button>Log-in</button>
-            </Link>
-            <Link to="/register">
-              <button>Register</button>
-            </Link>
+            <Link to="/login">Log-in</Link>
+            <Link to="/register">Register</Link>
           </>
         )}
       </div>
