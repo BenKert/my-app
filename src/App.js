@@ -21,7 +21,7 @@ export default function App() {
     <section>
       <Navbar loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setLoggedIn={setLoggedIn} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/add" element={<Add />} />
         <Route path="/" element={<Home />} />
