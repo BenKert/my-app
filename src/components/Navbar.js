@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import logo from "../images/logo.svg";
 
 export default function Navbar({ loggedIn, setLoggedIn }) {
   const navigate = useNavigate();
@@ -10,9 +11,7 @@ export default function Navbar({ loggedIn, setLoggedIn }) {
 
   return (
     <nav>
-      <Link to="/">
-        <img alt="logo" src="../../public/images/logo.svg" />
-      </Link>
+      <Link to="/">Home</Link>
       <div>
         {loggedIn ? (
           <>

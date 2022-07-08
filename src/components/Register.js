@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   const navigate = useNavigate();
-  const [mail, setMail] = useState("");
-  const [pass, setPass] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -14,8 +14,8 @@ export default function Register() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        mail,
-        pass,
+        email,
+        password,
       }),
     })
       .then((res) => res.json())
@@ -31,14 +31,14 @@ export default function Register() {
         <input
           type="email"
           placeholder="Your Email"
-          onChange={(e) => setMail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         ></input>
         <input
           type="password"
           placeholder="Password"
-          onChange={(e) => setPass(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button>Register</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );

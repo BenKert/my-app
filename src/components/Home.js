@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <div>
       {skills.length === 0 ? (
-        <p>No skills yet...</p>
+        <p>You have no skills</p>
       ) : (
         <div>
           {skills.map((skill) => (
